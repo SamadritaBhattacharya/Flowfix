@@ -1,7 +1,6 @@
 import React from 'react'
-import Navbar from './Navbar'
 import NavHead from './NavHead'
-//import NavHead from './NavHead'
+
 
 const Hero = () => {
   return (
@@ -14,9 +13,7 @@ const Hero = () => {
              
              <div className=' relative   -mt-[450px] [text-shadow:1px_1x_2px_rgba(0,0,.2)]' id='text'>
               <h1 className=' flex justify-center items-center  ml-[550px] text-[40px] font-semibold text-gray-800'>Hello world!</h1>
-              {/* <h3 className=' text-gray-600 flex justify-center items-center ml-[250px] mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nihil aperiam dolores itaque recusandae, neque mollitia nesciunt facilis eius quia non veritatis inventore sequi sint. Perferendis quas doloremque repellat et!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum labore error doloremque quaerat ullam incidunt dolorum, dignissimos eligendi sed.
-              </h3> */}
+              
               <div className=' ml-[800px] mt-6 grid grid-cols-2 gap-4 max-w-xl w-full'>
                 <p className='text-gray-800'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor
@@ -39,14 +36,10 @@ const Hero = () => {
                 Get Started
               </button>
               </div>
-             {/* </div> */}
+            
         </section>
         
-        {/* <section className='absolute inset-0 top-0 left-0 bg-cover bg-center' style={{backgroundImage: `url('../landingpage.jpg')`}}> */}
-            
-
-            {/* <h1></h1>
-        </section> */}
+        
        
     </div>
   )
