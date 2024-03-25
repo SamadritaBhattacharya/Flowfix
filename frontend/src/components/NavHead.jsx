@@ -5,7 +5,7 @@ export default function NavHead(){
     return ( <nav className="nav">
         <Link to="/" className="title"> Water Watch</Link>
         <ul className="space-x-16">
-            <CustomLink to="/Stocks">About</CustomLink>
+            <CustomLink to="/about">About</CustomLink>
             <CustomLink to="/Stocks">Services</CustomLink>
             <CustomLink to="/Stocks">Contact</CustomLink>
             <CustomLink to="/Stocks">Maps</CustomLink>

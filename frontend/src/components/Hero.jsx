@@ -1,5 +1,6 @@
 import React from 'react'
 import NavHead from './NavHead'
+import About from './About_us'
 
 
 const Hero = () => {
@@ -38,11 +39,18 @@ const Hero = () => {
               </div>
             
         </section>
+
+        {/* <section >
+          <About />
+          <h1>About</h1>
+        </section> */}
+        
         
         
        
     </div>
   )
 }
+<About />
 
 export default Hero
