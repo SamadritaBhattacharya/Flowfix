@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios"
 
 const Signup = () => {
@@ -9,11 +9,14 @@ const Signup = () => {
     const [email,setEmail] = useState()
     const [password,setPassword] = useState()
 
+    const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:5000/signup', {name,aadhar,email,password})
-        .then(result => console.log(result))
-        .catch(err => console.log(err))
+        axios.post('http://localhost:5000/register', {name,aadhar,email,password})
+        .then(result => {console.log(result)
+            navigate('/login')
+        })
+    .catch(err => console.log(err))
     }
 
   return (
@@ -30,7 +33,7 @@ const Signup = () => {
                         placeholder='Enter Name'
                         autoComplete='off'
                         name='username'
-                        className=' rounded-lg ml-10 hover:p-1 hover:bg-slate-400'
+                        className='  text-black rounded-lg ml-10 hover:p-1 hover:bg-slate-400'
                         onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className='mb-2 ml-[100px] p-3  items-center text-gray-300 '>
@@ -42,7 +45,7 @@ const Signup = () => {
                         placeholder='Enter Aadhar number'
                         autoComplete='off'
                         name='aadhar'
-                        className=' rounded-lg ml-8 hover:p-1 hover:bg-slate-400'
+                        className='text-black rounded-lg ml-8 hover:p-1 hover:bg-slate-400'
                         onChange={(e) => setAadhar(e.target.value)} />
                 </div>
                 <div className='mb-2 ml-[100px] p-3  items-center text-gray-300 '>
@@ -54,7 +57,7 @@ const Signup = () => {
                         placeholder='Email'
                         autoComplete='off'
                         name='email'
-                        className=' rounded-lg ml-10 hover:p-1 hover:bg-slate-400'
+                        className='text-black rounded-lg ml-10 hover:p-1 hover:bg-slate-400'
                         onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div className='mb-2  ml-[100px] p-3 text-gray-300'>
@@ -65,7 +68,7 @@ const Signup = () => {
                         type='password'
                         placeholder='Enter Password'
                         name='password'
-                        className='rounded-lg ml-2 hover:p-1 hover:bg-slate-400' 
+                        className='text-black rounded-lg ml-2 hover:p-1 hover:bg-slate-400' 
                         onChange={(e) => setPassword(e.target.value)}/>
                 </div>
                 <div className=' flex justify-center items-center p-4'>

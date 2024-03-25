@@ -9,7 +9,7 @@ export default function NavHead(){
             <CustomLink to="/Stocks">Services</CustomLink>
             <CustomLink to="/Stocks">Contact</CustomLink>
             <CustomLink to="/Stocks">Maps</CustomLink>
-            <button className="flex justify-end bg-purple-1000 hover:bg-purple-800 text-white font-bold py-0 px-2 rounded" >Sign in</button>
+            <CustomLink to={"/register"}  >Sign in</CustomLink>
         </ul>
         
 </nav>)

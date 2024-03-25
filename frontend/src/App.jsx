@@ -5,6 +5,7 @@ import About from "./components/About_us";
 import {  BrowserRouter , Routes, Route } from 'react-router-dom';
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import NotFound from "./components/NotFound";
 
 
 
@@ -20,9 +21,9 @@ const App = () => {
 
           <Route exact path="/about" element={<About />} /> 
           <Route exact path="/login" element={<Login />} />
-          <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/register" element={<Signup />} />
                    
-          {/* <Route exact path="/stocks" element={<Stocks />} /> */}
+          {/* <Route exact path="/erro" element={<NotFound />} /> */}
           {/* <Route path="/about" element={<About />} /> */}
           {/* <Route exact path="/stocks" element= {<Stocks />} /> */}
         </Routes>
