@@ -9,6 +9,13 @@ const complaintSchema= new Schema({
         type: String,
         required: true
     },
+    category:{
+        type: String,
+        required:true
+    },
+    complaintImage:{
+        type: String
+    },
     status:{
         type: String,
         enum: ['Pending', 'In Progress', 'Resolved'],
@@ -25,4 +32,4 @@ const complaintSchema= new Schema({
       }
 },{timestamps:true});
 
-export const Complaint= mongoose.model("User", complaintSchema)
+export const Complaint= mongoose.model("Complaint", complaintSchema)
