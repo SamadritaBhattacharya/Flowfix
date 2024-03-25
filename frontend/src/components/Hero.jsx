@@ -34,16 +34,13 @@ const Hero = () => {
                 </p>
               </div>
               <button className="bg-blue-500 ml-[1000px] hover:bg-blue-300 hover:text-cyan-800  hover:font-semibold text-white py-2 px-4 rounded mt-4">
-                Get Started
+                Report Problems
               </button>
               </div>
             
         </section>
 
-        {/* <section >
-          <About />
-          <h1>About</h1>
-        </section> */}
+        
         
         
         
