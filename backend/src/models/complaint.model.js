@@ -1,30 +1,31 @@
 import mongoose, {Schema} from "mongoose";  
 
 const complaintSchema= new Schema({
-    title:{
+    username:{
         type: String,
         required: true,
     },
-    description:{
+    contact:{
+        type: String,
+        required: true
+    },
+    address:{
         type: String,
         required: true
     },
     category:{
         type: String,
-        required:true
+        required:true,
+        enum: ['Leakage', 'Jammed', 'Drain overflow', 'others'],
+        default:'Leakage'
     },
-    complaintImage:{
-        type: String
-    },
-    status:{
+    description:{
         type: String,
-        enum: ['Pending', 'In Progress', 'Resolved'],
-        default:'Pending'
     },
     createdBy:{
         type: Schema.Types.ObjectId,
         ref: 'User',
-        required: true
+        
     },
     assignedTo: {
         type: Schema.Types.ObjectId,

@@ -9,12 +9,13 @@ import { Complaint } from "../models/complaint.model.js";
 
 const newComplaint= asyncHandler(async(req, res)=>{
     const complaint = new Complaint({
-        title: req.body.title,
-        description: req.body.description,
+        username: req.body.username,
+        contact: req.body.contact,
+        address: req.body.address,
         category: req.body.category,
-        status: req.body.status
+        description: req.body.description
       });
-    
+
       try {
         const newComplaint = await complaint.save();
        
@@ -22,14 +23,36 @@ const newComplaint= asyncHandler(async(req, res)=>{
             new ApiResponse(201, "Complaint registered successfully", newComplaint)
         )
       } catch (err) {
-        throw new ApiError(500, "complaint was not registered. Try again")
+        res.status(400).json({ message: err.message });
+        
       }
 })
 
 // update complaint
 
-const updateComplaint= asyncHandler(getComplaint,async(req,res)=>{
-    if (req.body.title != null) {
+const updateComplaint= asyncHandler(async(req,res)=>{
+   
+    //   try {
+    //     const updatedComplaint = await res.complaint.save();
+    //     return res.status(201).json(
+    //     new ApiResponse(201, "Complaint was updated successfully", updatedComplaint)
+    //     )
+    //   } catch (err) {
+    //     res.status(400).json({ message: err.message });
+    //   }
+
+    try {
+    
+      const complaint = await Complaint.findById(req.complaint._id);
+      
+      if (!complaint) {
+        console.log(complaint);
+          return { success: false, message: 'Complaint not found' };
+          
+      }
+
+      // Update the complaint fields with the new values
+      if (req.body.title != null) {
         res.complaint.title = req.body.title;
       }
       if (req.body.description != null) {
@@ -38,17 +61,21 @@ const updateComplaint= asyncHandler(getComplaint,async(req,res)=>{
       if (req.body.category != null) {
         res.complaint.category = req.body.category;
       }
+      if (req.body.location != null) {
+        res.complaint.location = req.body.location;
+      }
       if (req.body.status != null) {
         res.complaint.status = req.body.status;
       }
-      try {
-        const updatedComplaint = await res.complaint.save();
-        return res.status(201).json(
-        new ApiResponse(201, "Complaint was updated successfully", updatedComplaint)
-        )
-      } catch (err) {
-        res.status(400).json({ message: err.message });
-      }
+
+      // Save the updated complaint
+      await complaint.save();
+
+      return { success: true, message: 'Complaint updated successfully', updatedComplaint: complaint };
+  } catch (error) {
+      return { success: false, message: 'An error occurred while updating the complaint', error: error };
+  }
+
     });
     
 // delete complaint

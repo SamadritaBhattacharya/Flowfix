@@ -5,7 +5,7 @@ const router= Router();
 
 router.post('/new-complaint', newComplaint);
 router.get('/complaints', allComplaints);
-router.patch('/:id/update', updateComplaint);
+router.patch('/update', updateComplaint);
 router.delete('/:id/delete', deleteComplaint);
 
 export default router;
