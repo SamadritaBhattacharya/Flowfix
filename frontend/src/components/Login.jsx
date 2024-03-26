@@ -15,7 +15,7 @@ const Login = () => {
         axios.post('/api/user/login', {username,email,password})
         .then(result => {
           console.log(result)
-          if(result.message === "Success"){
+          if(result.data === "Success"){
             navigate('/')
             console.log("logged in success")
           }
@@ -43,7 +43,7 @@ const Login = () => {
                         onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div className='mb-2 ml-[100px] p-3  items-center text-gray-300 '>
-                    <label htmlFor='email'>
+                    <label htmlFor='username'>
                         <strong>Name: </strong>
                     </label>
                     <input 
