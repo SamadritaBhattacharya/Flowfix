@@ -4,7 +4,7 @@ import axios from "axios"
 
 const Signup = () => {
 
-    const [name,setName] = useState()
+    const [username,setName] = useState()
     const [aadhar,setAadhar] = useState()
     const [email,setEmail] = useState()
     const [password,setPassword] = useState()
@@ -12,7 +12,7 @@ const Signup = () => {
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:5000/register', {name,aadhar,email,password})
+        axios.post('/api/user/register', {username,aadhar,email,password})
         .then(result => {console.log(result)
             navigate('/login')
         })

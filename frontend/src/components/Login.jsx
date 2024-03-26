@@ -4,7 +4,7 @@ import axios from "axios"
 
 const Login = () => {
 
-    // const [name,setName] = useState()
+    const [username,setName] = useState()
     // const [aadhar,setAadhar] = useState()
     const [email,setEmail] = useState()
     const [password,setPassword] = useState()
@@ -12,10 +12,12 @@ const Login = () => {
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:5173/login', {email,password})
-        .then(result => {console.log(result)
+        axios.post('/api/user/login', {username,email,password})
+        .then(result => {
+          console.log(result)
           if(result.data === "Success"){
             navigate('/')
+            console.log("logged in success")
           }
             
         })
@@ -39,6 +41,18 @@ const Login = () => {
                         name='email'
                         className='text-black rounded-lg ml-10 hover:p-1 hover:bg-slate-400'
                         onChange={(e) => setEmail(e.target.value)} />
+                </div>
+                <div className='mb-2 ml-[100px] p-3  items-center text-gray-300 '>
+                    <label htmlFor='username'>
+                        <strong>Name: </strong>
+                    </label>
+                    <input 
+                        type='text'
+                        placeholder='username'
+                        autoComplete='off'
+                        name='username'
+                        className='text-black rounded-lg ml-10 hover:p-1 hover:bg-slate-400'
+                        onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className='mb-2  ml-[100px] p-3 text-gray-300'>
                     <label htmlFor='password'>

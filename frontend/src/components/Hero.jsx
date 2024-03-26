@@ -1,9 +1,13 @@
 import React from 'react'
 import NavHead from './NavHead'
 import About from './About_us'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const Hero = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className=' top-0 relative w-full h-screen'>
        <NavHead /> 
@@ -33,7 +37,7 @@ const Hero = () => {
                   consequat lacus, vel ornare augue.
                 </p>
               </div>
-              <button className="bg-blue-500 ml-[1000px] hover:bg-blue-300 hover:text-cyan-800  hover:font-semibold text-white py-2 px-4 rounded mt-4">
+              <button onClick={() => navigate("/report")} className="bg-blue-500 ml-[1000px] hover:bg-blue-300 hover:text-cyan-800  hover:font-semibold text-white py-2 px-4 rounded mt-4">
                 Report Problems
               </button>
               </div>

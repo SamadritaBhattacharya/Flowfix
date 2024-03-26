@@ -5,7 +5,8 @@ import About from "./components/About_us";
 import {  BrowserRouter , Routes, Route } from 'react-router-dom';
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import NotFound from "./components/NotFound";
+import Report from "./components/Report";
+//import NotFound from "./components/NotFound";
 
 
 
@@ -24,7 +25,7 @@ const App = () => {
           <Route exact path="/register" element={<Signup />} />
                    
           {/* <Route exact path="/erro" element={<NotFound />} /> */}
-          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/report" element={<Report />} /> 
           {/* <Route exact path="/stocks" element= {<Stocks />} /> */}
         </Routes>
         </BrowserRouter>
