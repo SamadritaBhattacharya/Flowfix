@@ -6,10 +6,10 @@ export default function NavHead(){
         <Link to="/" className="title"> Water Watch</Link>
         <ul className="space-x-16">
             <CustomLink to="/about">About</CustomLink>
-            <CustomLink to="/services">Services</CustomLink>
-            <CustomLink to="/contact">Contact</CustomLink>
-            <CustomLink to="/maps">Maps</CustomLink>
-            <button className="flex justify-end  hover:bg-green-800 text-white font-bold py-0 px-2 rounded" >Sign in</button>
+            <CustomLink to="/Stocks">Services</CustomLink>
+            <CustomLink to="/Stocks">Contact</CustomLink>
+            <CustomLink to="/Stocks">Maps</CustomLink>
+            <CustomLink to={"/register"}  >Sign in</CustomLink>
         </ul>
         
 </nav>)

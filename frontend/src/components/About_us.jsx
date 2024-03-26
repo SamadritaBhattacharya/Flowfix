@@ -7,35 +7,45 @@ const About = () => {
 
   useEffect(() => {
     Aos.init({
-        duration: 2500,
+        duration: 1000,
         delay: 200,
     })
   }, []);
 
-  return (
-   <section  className="about" id='about' data-aos="zoom-in-up"
-   data-aos-offset="300" >
+
      
-     <div className='font-semibold text-3xl text-[#fff] mb-3'>
-      <h1>About Us</h1>
-      </div>
-     
-      <div className=" font-medium text-[#fff] overflow-hidden p-8 bg-opacity-30 h-full shadow-2xl shadow-black rounded-xl  backdrop-blur-xl backdrop-filter flex mx-auto space-x-8" >
-        {/* <div data-aos="zoom-in-up"
-            data-aos-offset="400"> */}
-           
-        <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore architecto tempora, quo corporis beatae corrupti doloremque a nobis dicta.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, tempore?
-        <br /><br />
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente temporibus nulla impedit vero doloremque eaque cum amet, reprehenderit odit non quisquam perspiciatis dignissimos nam, illo facilis odio autem. Itaque impedit voluptates eaque animi tenetur dicta deserunt eius fuga harum.
-         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, laborum?
-        </p>
-        {/* </div> */}
-       
-      </div>
-   </section>
-  )
+
+
+return(
+  <>
+    
+
+<section  className="about" id='about' data-aos="zoom-in-up"
+    data-aos-offset="300">
+
+          
+            <div className="bg-cover bg-center bg-no-repeat bg-image h-screen" style={{ backgroundImage: `url('../water.png')` }}>
+              <div className="absolute inset-0 flex flex-col  text-center">
+                <div className=' mt-20 '>
+                <h1 className="text-4xl font-bold mb-4 text-gray-950 justify-center items-center text-center">About Us</h1>
+                <p className="text-gray-800 mb-8">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+                  massa eget lacus laoreet tempor vel a ante. Nam elementum eros vel
+                  ligula efficitur, ut interdum ipsum tincidunt.
+                </p>
+              </div>
+
+              
+
+
+              </div>
+              </div>
+              
+            </section>
+  </>
+)
+
+
 }
 
 export default About
