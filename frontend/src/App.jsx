@@ -7,7 +7,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Report from "./components/Report";
 import Success from "./components/Success";
-//import NotFound from "./components/NotFound";
+import NotFound from "./components/NotFound";
 
 
 
@@ -25,7 +25,7 @@ const App = () => {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Signup />} />
                    
-          {/* <Route exact path="/erro" element={<NotFound />} /> */}
+          <Route exact path="*" element={<NotFound />} />
           <Route path="/report" element={<Report />} /> 
           <Route exact path="/success" element= {<Success />} />
         </Routes>
