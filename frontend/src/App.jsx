@@ -6,6 +6,7 @@ import {  BrowserRouter , Routes, Route } from 'react-router-dom';
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Report from "./components/Report";
+import Success from "./components/Success";
 //import NotFound from "./components/NotFound";
 
 
@@ -26,7 +27,7 @@ const App = () => {
                    
           {/* <Route exact path="/erro" element={<NotFound />} /> */}
           <Route path="/report" element={<Report />} /> 
-          {/* <Route exact path="/stocks" element= {<Stocks />} /> */}
+          <Route exact path="/success" element= {<Success />} />
         </Routes>
         </BrowserRouter>
       
