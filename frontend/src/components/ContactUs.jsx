@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
+import NavHead from "./NavHead";
 // import './Contact.css'
 
 
@@ -29,7 +30,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact-bg h-screen">
+    <section className="contact-bg h-screen bg-gradient-to-r from-green-200 to-emerald-800">
+   <NavHead/>
     <StyledContactForm>
        
       <h2 id="contact" className="heading">Contact Us</h2>
@@ -101,7 +103,7 @@ const StyledContactForm = styled.div`;
     input[type="submit"] {
       margin-top: 2rem;
       cursor: pointer;
-       background:#33908f;
+       background:#065f46;
       color: white;
       border-radius: 15px;
       width:200px;

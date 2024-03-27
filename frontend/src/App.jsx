@@ -9,6 +9,7 @@ import Report from "./components/Report";
 import Success from "./components/Success";
 import NotFound from "./components/NotFound";
 import  ContactUs  from "./components/ContactUs";
+import Services from "./components/Services";
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
           <Route exact path="/contact" element={<ContactUs/>}/>
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Signup />} />
+          <Route exact path="/services" element={<Services/>} />
                    
           <Route exact path="*" element={<NotFound />} />
           <Route path="/report" element={<Report />} /> 
