@@ -2,6 +2,8 @@ import React from 'react'
 import NavHead from './NavHead'
 import About from './About_us'
 import { Link, useNavigate } from 'react-router-dom'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 const Hero = () => {
@@ -19,6 +21,8 @@ const Hero = () => {
              <div className=' relative   -mt-[450px] [text-shadow:1px_1x_2px_rgba(0,0,.2)]' id='text'>
               <h1 className=' flex justify-center items-center  ml-[550px] text-[40px] font-semibold text-gray-800'>WELCOME!</h1>
               
+
+
               {/* <div className=' ml-[800px] mt-6 grid grid-cols-2 gap-4 max-w-xl w-full'>
                 <p className='text-gray-800'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor
@@ -37,6 +41,13 @@ const Hero = () => {
                   consequat lacus, vel ornare augue.
                 </p>
               </div>*/}
+
+
+             
+
+
+
+              
               <div className='ml-[850px] mt-6 flex gap-4 max-w-xl w-full font-semibold text-gray-700'>
                 One Stop Solution to all your drainage problems!
               </div>
@@ -46,9 +57,10 @@ const Hero = () => {
               <button onClick={() => navigate("/report")} className="bg-blue-500 ml-[1000px] hover:bg-blue-300 hover:text-cyan-800  hover:font-semibold text-white py-2 px-4 rounded mt-16">
                 Report Problems
               </button>
+
               </div> 
             
-        </section>
+         </section>
 
         
         
