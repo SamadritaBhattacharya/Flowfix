@@ -20,8 +20,8 @@ const Signup = () => {
     }
 
   return (
-    <div className='flex justify-center items-center bg-gradient-to-r from-slate-800 via-stone-700 to-stone-900 h-[700px]'>
-        <div className='bg-gradient-to-r from-slate-500 via-slate-700 to-slate-900 p-3 border-spacing-2 shadow-[0px_9px_21px_5px_#c6f6d5] w-[800px] h-[500px] '>
+    <div className='flex justify-center items-center  bg-gradient-to-r from-green-200 to-emerald-800 h-screen'>
+        <div className='bg-gradient-to-r from-teal-300 to-teal-900 p-3 border-spacing-2 shadow-[0px_9px_21px_5px_#c6f6d5] w-[800px] h-[500px] '>
             <h2 className='flex justify-center items-center mt-8 mb-12 font-serif font-semibold text-gray-100 text-[30px]'>REGISTER</h2>
             <form onSubmit={handleSubmit} className=' ml-[100px]'>
                 <div className='mb-2 ml-[100px] p-3  items-center text-gray-300 '>
@@ -72,7 +72,7 @@ const Signup = () => {
                         onChange={(e) => setPassword(e.target.value)}/>
                 </div>
                 <div className=' flex justify-center items-center p-4'>
-                   <button type='submit' className=' mt-10 mb-6 p-4 border w-40 bg-slate-500 rounded-3xl font-semibold text-gray-200 hover:bg-blue-200 hover:text-cyan-600'>
+                   <button type='submit' className=' mt-10 mb-6 p-4 border w-40 bg-teal-800 rounded-3xl font-semibold text-gray-200 hover:bg-blue-200 hover:text-cyan-600'>
                         Register
                     </button> 
                 </div>

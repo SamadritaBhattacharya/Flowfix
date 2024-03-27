@@ -32,49 +32,30 @@ const newComplaint= asyncHandler(async(req, res)=>{
 
 const updateComplaint= asyncHandler(async(req,res)=>{
    
-    //   try {
-    //     const updatedComplaint = await res.complaint.save();
-    //     return res.status(201).json(
-    //     new ApiResponse(201, "Complaint was updated successfully", updatedComplaint)
-    //     )
-    //   } catch (err) {
-    //     res.status(400).json({ message: err.message });
-    //   }
+  const { username,contact,address, category, description }= req.body;
 
-    try {
-    
-      const complaint = await Complaint.findById(req.complaint._id);
-      
-      if (!complaint) {
-        console.log(complaint);
-          return { success: false, message: 'Complaint not found' };
-          
-      }
+    if(!(username || contact || address || category)){
+        throw new ApiError(400,"All fields are required");
+    }
 
-      // Update the complaint fields with the new values
-      if (req.body.title != null) {
-        res.complaint.title = req.body.title;
-      }
-      if (req.body.description != null) {
-        res.complaint.description = req.body.description;
-      }
-      if (req.body.category != null) {
-        res.complaint.category = req.body.category;
-      }
-      if (req.body.location != null) {
-        res.complaint.location = req.body.location;
-      }
-      if (req.body.status != null) {
-        res.complaint.status = req.body.status;
-      }
+  const complaint = await Complaint.findByIdAndUpdate(
+        req.user?._id,
+        {
+            $set:{
+                username,
+                contact,
+                address,
+                category,
+                description
+            }
+        },
+        {new: true}
+        
+        )
 
-      // Save the updated complaint
-      await complaint.save();
-
-      return { success: true, message: 'Complaint updated successfully', updatedComplaint: complaint };
-  } catch (error) {
-      return { success: false, message: 'An error occurred while updating the complaint', error: error };
-  }
+        return res
+        .status(200)
+        .json(new ApiResponse(200, complaint, "Complaint details updated"))    
 
     });
     
