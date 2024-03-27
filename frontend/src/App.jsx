@@ -8,6 +8,8 @@ import Signup from "./components/Signup";
 import Report from "./components/Report";
 import Success from "./components/Success";
 import NotFound from "./components/NotFound";
+import Profile from "./components/Profile";
+import Maps from "./components/Maps";
 
 
 
@@ -18,16 +20,19 @@ const App = () => {
      
       <BrowserRouter>
         <Routes>
-          {/* <Route exact path="/" element={<Home />} /> */}
+          
           <Route exact path="/" element={<Hero />} />
 
           <Route exact path="/about" element={<About />} /> 
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Signup />} />
+
+          <Route exact path="/profile" element={<Profile />} /> 
                    
           <Route exact path="*" element={<NotFound />} />
           <Route path="/report" element={<Report />} /> 
           <Route exact path="/success" element= {<Success />} />
+          <Route exact path="/map" element={<Maps />} />
         </Routes>
         </BrowserRouter>
       

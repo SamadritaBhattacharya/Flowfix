@@ -17,7 +17,7 @@ const Hero = () => {
         
              
              <div className=' relative   -mt-[450px] [text-shadow:1px_1x_2px_rgba(0,0,.2)]' id='text'>
-              <h1 className=' flex justify-center items-center  ml-[550px] text-[40px] font-semibold text-gray-800'>Hello world!</h1>
+              <h1 className=' flex justify-center items-center  ml-[550px] text-[40px] font-semibold text-gray-800'>Welcome!</h1>
               
               <div className=' ml-[800px] mt-6 grid grid-cols-2 gap-4 max-w-xl w-full'>
                 <p className='text-gray-800'>

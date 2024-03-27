@@ -16,7 +16,7 @@ const Login = () => {
         .then(result => {
           console.log(result)
           if(result.data === "Success"){
-            navigate('/')
+            navigate('/profile')
             console.log("logged in success")
           }
             
