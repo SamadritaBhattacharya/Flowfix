@@ -11,6 +11,7 @@ import NotFound from "./components/NotFound";
 import  ContactUs  from "./components/ContactUs";
 import Services from "./components/Services";
 import Maps from "./components/Maps";
+import Profile from "./components/Profile";
 
 
 
@@ -29,7 +30,8 @@ const App = () => {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Signup />} />
           <Route exact path="/services" element={<Services/>} />
-                   
+
+          <Route exact path="/profile" element={<Profile />} />                   
           <Route exact path="*" element={<NotFound />} />
           <Route path="/report" element={<Report />} /> 
           <Route exact path="/success" element= {<Success />} />

@@ -51,8 +51,8 @@ const Services = () => {
   return (
     <section className="services px-4 py-16 text-center bg-gradient-to-r from-green-200 to-emerald-800 h-screen">
         <NavHead/>
-      <h2 className="text-3xl font-bold mb-12 text-green-900 mt-10">Our Services</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <h2 className="text-3xl font-bold mb-12 text-cyan-50 mt-8">OUR SERVICES</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-4">
         {services.map((service) => (
           <ServiceCard key={service.title} service={service} />
         ))}

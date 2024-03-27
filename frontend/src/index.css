@@ -79,7 +79,7 @@ body{
   
   }
   
-  .nav , arnabh{
+  .nav {
     /* color:inherit;
     text-decoration: none;
     height: 100%;
@@ -101,6 +101,7 @@ body{
     margin: 0;
     list-style: none;
     display: flex;
+    margin-top: 8px;
   
     /* gap:  3rem;
   
