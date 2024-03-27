@@ -38,7 +38,8 @@ const services = [
 
 const ServiceCard = ({ service }) => {
   return (
-    <div className="service-card bg-green-100 p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition duration-300 mb-6">
+    <div className="service-card bg-green-100 p-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition duration-300 mb-6 py-14
+    ">
       <i className={`${service.icon} text-3xl text-green-700`}></i>
       <h3 className="text-xl font-medium mt-4 mb-2">{service.title}</h3>
       <p className="text-gray-700">{service.description}</p>
