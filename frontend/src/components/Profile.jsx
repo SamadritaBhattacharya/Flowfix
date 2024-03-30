@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavHead from './NavHead'
 import {useNavigate } from 'react-router-dom'
+import { useParams} from 'react-router-dom'
+//import axios from 'axios'
 
 
 const Profile = () => {
 
   const navigate = useNavigate();
+  const {userid} = useParams();
+  //const [data,setData] = useState([]);
+
+  // fetch('/api/user/current-user')
+  // .then(response => response.json() )
+  // .then( data => {
+  //   console.log(data);
+  //   setData(data)
+    
+  // },[])
+
+  // useEffect( () => {
+  //   axios.get('/api/user/current-user', {userid, username})
+  //   .then( response => response.json())
+  //   .then(data => console.log(data));
+  // })
 
   return (
     <div className=' top-0 relative w-full h-screen'>
@@ -16,7 +34,9 @@ const Profile = () => {
         
              
              <div className=' relative   -mt-[450px] [text-shadow:1px_1x_2px_rgba(0,0,.2)]' id='text'>
-              <h1 className=' flex justify-center items-center  ml-[550px] text-[40px] font-semibold text-gray-800'>Hello {}!</h1>
+              <h1 className=' flex justify-center items-center  ml-[550px] text-[40px] font-semibold text-gray-800'>
+                Hello {userid}!
+              </h1>
               
               <div className=' ml-[800px] mt-6 grid grid-cols-2 gap-4 max-w-xl w-full'>
                 <p className='text-gray-800'>

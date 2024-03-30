@@ -31,7 +31,7 @@ const App = () => {
           <Route exact path="/register" element={<Signup />} />
           <Route exact path="/services" element={<Services/>} />
 
-          <Route exact path="/profile" element={<Profile />} />                   
+          <Route exact path="/profile/:userid" element={<Profile />} />                   
           <Route exact path="*" element={<NotFound />} />
           <Route path="/report" element={<Report />} /> 
           <Route exact path="/success" element= {<Success />} />
