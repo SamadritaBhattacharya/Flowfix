@@ -10,6 +10,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    color: white;
     
 
 }
@@ -53,71 +54,6 @@ body{
 }
 
 
-/* navhead */
-.nav{
-
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 100;
-  
-   
-  }
-  .title{
-    /* font-size: 2.2rem; */
-
-    font-size: 2em;
-    
-    color: #f6fcfa;
-    pointer-events: none;
-    margin-right: 600px;
-  
-  }
-  
-  .nav {
-   
-  
-    text-decoration: none;
-    color: #f6fcfa;
-    padding: 6px 15px;
-    border-radius: 20px;
-    margin: 0 10px;
-    font-weight:600;
-    
-  }
-  .nav ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    margin-top: 8px;
-  
-    /* gap:  3rem;
-  
-    gap: 3rem; */
-  
-  
-  }
-  
-  
-  /* .nav li:hover{
-    background-color: #777;
-  } */
-
-  
-
-  .rom img{
-    /* position: absolute; */
-    margin-top: 0;
-    width: 100%;
-    height: 745px ;
-
-  }
 
   .wat img{
     /* position: absolute; */
