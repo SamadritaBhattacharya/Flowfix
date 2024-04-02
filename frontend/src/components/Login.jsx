@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+ // Assuming you have a DOCImage
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -30,7 +30,7 @@ const Login = () => {
     <>
       <div className="flex justify-center items-center h-screen gap-3" style={{ position: 'relative' }}>
         <img
-          src="../"
+          src="../gg5.jpg"
           alt="DOC"
           className="h-screen rounded-xl shadow-green-500 shadow-md"
           style={{
