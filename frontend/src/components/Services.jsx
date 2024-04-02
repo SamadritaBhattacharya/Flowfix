@@ -1,38 +1,42 @@
 import React from 'react';
 import NavHead from './Navbar';
-import { FaServicestack} from "react-icons/fa";
-import { GiArtificialIntelligence, GiMedicines, GiHealthPotion, GiHealthCapsule, GiHealthIncrease } from "react-icons/gi";
-import { GiMedicinePills } from "react-icons/gi";
+import { FaWrench } from 'react-icons/fa'; // Wrench Icon
+// import { GiPipe } from 'react-icons/gi'
+import { BsGearFill } from 'react-icons/bs'; // Gear Icon
+import { FiTool } from 'react-icons/fi'; // Tool Icon
+import { MdBuild } from 'react-icons/md'; // Build Icon
 const services = [
   {
-    title: 'Health Monitoring',
-    description: 'Utilize wearable devices and AI algorithms to monitor vital signs, track health metrics, and provide real-time alerts for potential health issues.',
-    icon: <GiHealthPotion />,
+    title: "Pipeline Installation",
+    description: "Expert installation of pipelines for various industries including oil and gas, water management, and utilities. Our experienced team ensures precise placement and adherence to safety standards.",
+    icon: <FaWrench/>
   },
   {
-    title: 'Diagnostic Imaging Analysis',
-    description: 'AI-powered analysis of medical imaging data (such as X-rays, MRIs, CT scans) for accurate diagnosis and detection of abnormalities',
-    icon: <GiMedicines />,
+    title: "Pipeline Maintenance",
+    description: "Comprehensive maintenance services to ensure the smooth operation of pipelines. This includes regular inspections, cleaning, repairs, and preventive maintenance measures.",
+    icon: <FaWrench/>
   },
   {
-    title: 'Predictive Analytics',
-    description: 'AI algorithms analyze patient data to predict disease progression, identify high-risk individuals, and recommend preventive interventions.',
-    icon: <GiArtificialIntelligence />,
+    title: "Pipeline Repair",
+    description: "Swift and effective repair services to address pipeline leaks, corrosion, damages, or other issues. Our team utilizes advanced techniques and equipment to minimize downtime.",
+    icon: <MdBuild/>
   },
   {
-    title: 'Remote Patient Monitoring',
-    description: 'Continuous monitoring of patient health data remotely using AI-enabled devices, allowing early detection of health issues and proactive intervention.',
-    icon: <GiHealthIncrease />,
+    title: "Pipeline Integrity Assessment",
+    description: "Thorough assessment of pipeline integrity using advanced technologies such as inline inspection tools and ultrasonic testing. We identify potential risks and provide recommendations for maintaining pipeline integrity.",
+    icon: <FiTool/>
   },
   {
-    title: 'Quick Services',
-    description: 'Improve your website\'s ranking and reach a wider audience through search engines.',
-    icon: <GiHealthCapsule />,
+    title: "Pipeline Construction",
+    description: "From planning to execution, we handle pipeline construction projects with expertise and efficiency. Our services include site preparation, trenching, welding, coating, and testing.",
+
+    icon: <BsGearFill/>
   },
+  
   {
-    title: 'Virtual Health Assistants',
-    description: 'AI-driven virtual assistants provide personalized health guidance, medication management, and lifestyle recommendations through natural language interaction.',
-    icon: <GiMedicinePills />,
+    title: "Quick Services",
+    description: "From planning to execution, we handle pipeline construction projects with expertise and efficiency. Our services include site preparation, trenching, welding, coating, and testing.",
+    icon: <BsGearFill/>
   },
 
 ];

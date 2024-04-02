@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <div>
       <div
-        className="bg-cover bg-center bg-no-repeat bg-image h-screen "
+        className="bg-cover bg-center bg-no-repeat bg-image h-screen w-full "
         style={{ backgroundImage: `url('../gg5.jpg')` }}
       >
         <Navbar />
@@ -36,22 +36,17 @@ const Hero = () => {
                 </h1>        
 
           
-          <p className="text-gray-100 text-xl md:text-xl lg:w-[800px] lg:pt-4 lg:text-xl font-normal leading-tight lg:p-16 lg:mb-2   md:px-0 mb-8">
+          <p className="text-gray-50 text-xl md:text-xl lg:w-[800px] lg:pt-4 lg:text-xl lg:font-semibold leading-tight lg:p-16 lg:mb-2   md:px-0 mb-8">
           Frustrated with clogged drains and slow water flow? Fluxion streamlines the repair process. Simply report your drainage problem through our user-friendly platform. We'll register your complaint and pinpoint the issue on an interactive map. Our network of skilled engineers will be instantly notified, ensuring a fast response to get your drainage problems resolved quickly and efficiently.
           </p> 
 
           <div className="flex flex-col md:flex-row items-center justify-center lg:flex md:ml-[50px] lg:ml-[100px]">
+            
             <button
               onClick={() => navigate("/register")}
-              className="bg-green-900 hover:bg-slate-400 hover:border-2 text-white font-bold py-2 px-4 rounded-full mb-4 md:mb-0 md:mr-4  mr-4"
-            >
-              Try for free
-            </button>
-            <button
-              onClick={() => navigate("/appointment")}
               className="bg-transparent border border-white hover:bg-white hover:text-blue-500 text-white font-bold py-2 px-4 rounded-full"
             >
-              Book your Appointment
+              Get Started for Free
             </button>
           </div>
         </section>

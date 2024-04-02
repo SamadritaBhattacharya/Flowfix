@@ -2,33 +2,32 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import img1 from "../assets/review1.jpeg"
+import img2 from "../assets/review2.jpeg"
+import img3 from "../assets/review3.jpeg"
+import img4 from "../assets/review4.jpeg"
+import img5 from "../assets/review5.jpeg"
 export const Review = () => {
   const data = [
     {
-      description:
-        "Absolutely amazed by the accuracy and efficiency of this health AI platform! It helped me diagnose my symptoms quickly and provided me with personalized recommendations.",
-      icon: "../assets/review1.jpeg",
+      description:"Great service! The team was efficient and professional. They completed the job ahead of schedule and within budget. Highly recommended.",
+      icon:img1,
     },
     {
-      description:
-        "As a busy professional, I don't always have time to visit a doctor for every little concern. This AI website has been a lifesaver! . Highly recommend!",
-      icon: "../assets/review2.jpeg",
+      description:"Outstanding service from start to finish. The communication was excellent, and they provided a thorough explanation of the work involved. Will definitely use their services again.",
+      icon: img2,
     },
     {
-      description:
-        "I've always been skeptical of online health platforms, but this one truly impressed me. Not only did it accurately assess my symptoms, but it also offered insightful explanations and advice.s!",
-      icon: "../assets/review3.jpeg",
+      description:"Overall satisfied with the service, but there were some minor issues with scheduling delays. However, the quality of work was good.",
+      icon: img3,
     },
     {
-      description:
-        "Living with a chronic condition can be challenging, but this health AI website has made it much easier to manage. I'm grateful for the support it provides.",
-      icon: "../assets/review4.jpeg",
+      description:"Great service! The team was efficient and professional. They completed the job ahead of schedule and within budget. Highly recommended.",
+      icon: img4,
     },
     {
-      description:
-        "Being proactive about my health is important to me, and this AI website makes it effortless.it offers comprehensive tools to help me stay on top of my well-being. I couldn't ask for more!",
-      icon: "../review5.jpeg",
+      description: "Absolutely fantastic service! The team went above and beyond to address all our needs. The project was completed smoothly and with great attention to detail. Highly recommend them for any pipeline project.",
+      icon: img5,
     },
   ];
   const settings = {
@@ -57,7 +56,7 @@ export const Review = () => {
           {data.map((d) => (
             <div
               key={d.description}
-              className="bg-dgreen h-[450px] text-white rounded-xl text-center"
+              className="bg-gray-600 h-[450px] text-white rounded-xl text-center"
             >
               <div className="h-56 bg-dgreen flex justify-center items-center rounded-t-xl">
                 <img src={d.icon} alt="" className="h-44 w-44 rounded-full" />
