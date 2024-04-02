@@ -86,9 +86,9 @@ const Signup = () => {
                   Aadhar:
                 </label>
                 <input
-                  type="text"
-                  id="age"
-                  name="age"
+                  type="number"
+                  id="aadhar"
+                  name="aadhar"
                   value={formData.aadhar}
                   onChange={handleChange}
                   className="border rounded-md px-2 py-1 w-full text-green-800"
@@ -130,7 +130,7 @@ const Signup = () => {
                 SignUp
               </button>
             </div>
-            <div className=" text-gray-400  flex justify-center items-center  lg:mt-1 hover:text-green-500">
+            <div className=" text-gray-200  flex justify-center items-center  lg:mt-1 hover:text-green-500">
            
               
             

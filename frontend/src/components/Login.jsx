@@ -89,8 +89,8 @@ const Login = () => {
                 Login
               </button>
             </div>
-            <p className=" text-gray-400  flex justify-center items-center text-xl font-medium lg:mt-4 ">OR</p>
-            <div className=" text-gray-400  flex justify-center items-center  lg:mt-2 font-medium ">
+            <p className=" text-gray-200  flex justify-center items-center text-xl font-medium lg:mt-4 ">OR</p>
+            <div className=" text-gray-200  flex justify-center items-center  lg:mt-2 font-medium ">
            
               
             
