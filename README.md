@@ -12,7 +12,7 @@ Fluxion is an online platform designed to streamline drainage complaints, provid
 
 ## Technologies Used 💻
 
-- **Frontend**: Vite
+- **Frontend**: Vite, Tailwind css, Leaflet js
 - **Backend**: Node.js
 - **Database**: MongoDB
 
