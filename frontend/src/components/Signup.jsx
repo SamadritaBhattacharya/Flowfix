@@ -138,7 +138,9 @@ const Signup = () => {
              >
                  Already have an account?  
               </Link>
+              
               </div>
+              <button onClick={() => navigate("/")} className='p-1 border-1 rounded-3xl bg-green-600 w-20 ml-36  mt-16 text-white'>Go Back</button>  
           </form>
         </div>
       </div>
