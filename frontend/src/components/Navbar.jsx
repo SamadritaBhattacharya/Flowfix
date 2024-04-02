@@ -55,7 +55,7 @@ export default function NavHead() {
             Services
           </CustomLink>
           <CustomLink
-            to="/maps"
+            to="/map"
             className="hover:text-green-900 hover:font-medium hover:rounded-full hover:bg-green-100 hover:p-1"
           >
             Maps
