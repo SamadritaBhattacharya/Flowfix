@@ -10,6 +10,8 @@ import Success from "./components/Success";
 import NotFound from "./components/NotFound";
 import  ContactUs  from "./components/ContactUs";
 import Services from "./components/Services";
+import Maps from "./components/Maps";
+import Profile from "./components/Profile";
 
 
 
@@ -20,7 +22,7 @@ const App = () => {
      
       <BrowserRouter>
         <Routes>
-          {/* <Route exact path="/" element={<Home />} /> */}
+          
           <Route exact path="/" element={<Hero />} />
 
           <Route exact path="/about" element={<About />} /> 
@@ -28,10 +30,12 @@ const App = () => {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Signup />} />
           <Route exact path="/services" element={<Services/>} />
-                   
+
+          <Route exact path="/profile/:userid" element={<Profile />} />                   
           <Route exact path="*" element={<NotFound />} />
           <Route path="/report" element={<Report />} /> 
           <Route exact path="/success" element= {<Success />} />
+          <Route exact path="/map" element={<Maps />} />
         </Routes>
         </BrowserRouter>
       

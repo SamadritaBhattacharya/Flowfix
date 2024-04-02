@@ -1,6 +1,6 @@
 import React from 'react';
 import NavHead from './Navbar';
-
+import { FaServicestack} from "react-icons/fa";
 import { GiArtificialIntelligence, GiMedicines, GiHealthPotion, GiHealthCapsule, GiHealthIncrease } from "react-icons/gi";
 import { GiMedicinePills } from "react-icons/gi";
 const services = [
@@ -39,7 +39,7 @@ const services = [
 
 const ServiceCard = ({ service }) => {
   return (
-    <div className="service-card bg-gray-500 p-8 rounded-lg shadow-md  hover:scale-105 hover:border-spacing-2 hover:shadow-[0px_9px_21px_5px_#c6f6d5]  transition duration-300 mb-6 py-14">
+    <div className="service-card bg-gray-600 p-8 rounded-lg shadow-md  hover:scale-105 hover:border-spacing-2 hover:shadow-[0px_9px_21px_5px_#c6f6d5]  transition duration-300 mb-6 py-14">
       <div className="text-3xl text-gray-100 ml-36 lg:ml-44
       ">{service.icon}</div>
       <h3 className="text-xl text-gray-50 font-medium mt-4 mb-2">{service.title}</h3>
