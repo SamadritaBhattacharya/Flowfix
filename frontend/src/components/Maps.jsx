@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'leaflet/dist/leaflet.css'; 
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet'; // Import leaflet library
+import NavHead from './Navbar';
 
 // Custom icon for the user's location marker
 const redIcon = new L.Icon({
@@ -59,8 +60,9 @@ const Maps = () => {
 
   return (
     <div>
-      <div id="map" className='mt-4 h-[650px] w-[1450px]  p-4 m-6 flex justify-center items-center'>
-        <MapContainer center={center} zoom={13} style={{ width: '100%', height: '100%' }} className='w-[1500px]'>
+      <NavHead />
+      <div id="map" className='mt-4 h-[560px] w-[1450px]  p-4 m-6 flex justify-center items-center'>
+        <MapContainer center={center} zoom={13} style={{ width: '100%', height: '100%' }} className='w-[1500px] '>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

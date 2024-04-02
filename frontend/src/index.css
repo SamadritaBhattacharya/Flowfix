@@ -10,132 +10,20 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: white;
     
+   
 
-}
-
-::selection {
-    background: rgba(0, 0, 0, .2);
 }
 
 body{
-    /* background: #f9f9f9;
-    min-height: 100vh;
-    overflow-x: hidden; */
-    background: rgba(1,25,21,1);
-    background: linear-gradient(90deg, black 0%, rgba(1,25,21,1) 100%); 
-    /* opacity: 25;*/
-    color: aliceblue;
-    
+  background-color: #0b1017;
 }
-
 /* #text{
    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
 }  */
 
-.parallexi img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-}
-
-.sec {
-    position: relative;
-    background: #003329;
-    padding: 100px;
-}
 
 
-.hero img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60%;
-   
-    pointer-events: none;
-}
-
-
-
-  .wat img{
-    /* position: absolute; */
-    margin-top: -5px;
-    width: 100%;
-    height: 100% ;
-  }
-
-
-
-  header{
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 100;
-}
-
-#logo{
-    font-size: 2em;
-    
-    color: #359381;
-    pointer-events: none;
-    margin-right: 270px;
-    
-}
-
-.navigation Link{
-    text-decoration: none;
-    color: #359381;
-    /* color: #83ecd9; */
-    padding: 6px 15px;
-    border-radius: 20px;
-    margin: 0 10px;
-    font-weight:600;
-    /* row-gap: 50; */
-   
-}
-
-.nav a:hover, 
-.nav a:active {
-    background: #359381;
-    color: #fff;
-    padding: 16px;
-    border-radius: 50%;
-}
-
+  
 /*Contact Us*/
 
-.heading{
-  color: black;
-  padding-top: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  font-weight: 700;
-}
-.contact{
-  
-  display: flex;
- justify-content: center;
- align-items: center;
-  color: white;
-  margin-left: 25%;
-  margin-right: 25%;
- 
-}
-
-
-/* styles.css */
-/* .map-container {
-  width: 500px;
-  height:screen
-  padding: 30px 50px ;
-} */

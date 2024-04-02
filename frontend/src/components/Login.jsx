@@ -1,196 +1,109 @@
-// import React, { useState } from 'react'
-// import { Link, useNavigate } from 'react-router-dom'
-// import axios from "axios"
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+ // Assuming you have a DOCImage
 
-// const Login = () => {
+const Login = () => {
+  const [formData, setFormData] = useState({ email: '', password: '' });
+  const navigate = useNavigate();
 
-//     const [username,setName] = useState()
-//     // const [aadhar,setAadhar] = useState()
-//     const [email,setEmail] = useState()
-//     const [password,setPassword] = useState()
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-//     const navigate = useNavigate()
-//     const handleSubmit = (e) => {
-//         e.preventDefault()
-//         axios.post('/api/user/login', {username,email,password})
-//         .then(result => {
-//           console.log(result)
-//           if(result.data === "Success"){
-//             navigate('/profile/:userid')
-//             console.log("logged in success")
-//           }
-            
-//         })
-//     .catch(err => console.log(err))
-//     }
-
-//   return (
-//     <div className='flex justify-center items-center bg-gradient-to-r from-slate-800 via-stone-700 to-stone-900 h-[700px]'>
-//         <div className='bg-gradient-to-r from-slate-500 via-slate-700 to-slate-900 p-3 border-spacing-2 shadow-[0px_9px_21px_5px_#c6f6d5] w-[800px] h-[500px] '>
-//             <h2 className='flex justify-center items-center mt-8 mb-12 font-serif font-semibold text-gray-100 text-[30px]'>LOGIN</h2>
-//             <form onSubmit={handleSubmit} className=' ml-[100px]'>
-                
-//                 <div className='mb-2 ml-[100px] p-3  items-center text-gray-300 '>
-//                     <label htmlFor='email'>
-//                         <strong>Email: </strong>
-//                     </label>
-//                     <input 
-//                         type='text'
-//                         placeholder='Email'
-//                         autoComplete='off'
-//                         name='email'
-//                         className='text-black rounded-lg ml-10 hover:p-1 hover:bg-slate-400'
-//                         onChange={(e) => setEmail(e.target.value)} />
-//                 </div>
-//                 <div className='mb-2 ml-[100px] p-3  items-center text-gray-300 '>
-//                     <label htmlFor='username'>
-//                         <strong>Name: </strong>
-//                     </label>
-//                     <input 
-//                         type='text'
-//                         placeholder='username'
-//                         autoComplete='off'
-//                         name='username'
-//                         className='text-black rounded-lg ml-10 hover:p-1 hover:bg-slate-400'
-//                         onChange={(e) => setName(e.target.value)} />
-//                 </div>
-//                 <div className='mb-2  ml-[100px] p-3 text-gray-300'>
-//                     <label htmlFor='password'>
-//                         <strong>Password: </strong>
-//                     </label>
-//                     <input 
-//                         type='password'
-//                         placeholder='Enter Password'
-//                         name='password'
-//                         className='text-black rounded-lg ml-2 hover:p-1 hover:bg-slate-400' 
-//                         onChange={(e) => setPassword(e.target.value)}/>
-//                 </div>
-//                 <div className=' flex justify-center items-center p-4'>
-//                    <button type='submit' className=' mt-[100px] mb-20 p-4 border w-40 bg-slate-500 rounded-3xl font-semibold text-gray-200 hover:bg-blue-200 hover:text-cyan-600'>
-//                         Login
-//                     </button> 
-//                 </div>
-//               </form>  
-//                 <p className=' mt-2 ml-16 flex justify-center items-center text-green-300'>Create new Account</p>
-//                 <Link to={"/register"} className=' ml-[350px] p-1 hover:bg-slate-500 hover:text-white font-mono font-bold flex justify-center items-center border w-40 bg-blend-lighten rounded'>
-//                     Signup
-//                 </Link>
-            
-//         </div>
-
-//     </div>
-//   )
-// }
-
-// export default Login
-
-
-
-
-
-
-
-
-
-
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import axios from "axios"
-
-
-const  Login= () => {
-
-    const [email,setEmail] = useState();
-    const [password,setPassword] = useState();
-
-    const navigate = useNavigate();
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        axios.post('/api/users/login', {email,password})
-        .then(result => {
-          console.log(result)
-          if(result.data === "Success"){
-            navigate('/profile')
-            console.log("logged in success")
-          }
-            
-        })
-    .catch(err => console.log(err))
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('/api/users/login', formData);
+      console.log(response.data);
+      navigate('/report');
+    } catch (error) {
+      console.error('Login error:', error);
     }
-
+  };
 
   return (
-    <div>
-      <div
-        className="bg-cover bg-center bg-no-repeat bg-image h-screen"
-        style= {{ backgroundImage: `url('../loginpic.jpg')` }}
-      >
+    <>
+      <div className="flex justify-center items-center h-screen gap-3" style={{ position: 'relative' }}>
+        <img
+          src="../gg5.jpg"
+          alt="DOC"
+          className="h-screen rounded-xl shadow-green-500 shadow-md"
+          style={{
+            filter: 'blur(5px) brightness(0.4)',
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: -1,
+            width: '1000px',
+            height: '580px',
+          }}
+        />
+        <img src="../formpic.png" alt="DOC" className="h-2/3 rounded-xl shadow-green-500 shadow-md" />
 
-        <div className="  flex justify-center items-center">
-            <div className=" bg-slate-900  mt-[90px]  w-[650px] h-[500px] p-10 border-spacing-2 shadow-[0px_9px_21px_5px_#c6f6d5]">
-                <div className=" text-gray-300">
-                    <h1 className=' font-medium text-3xl flex justify-center items-center mb-10 '>
-                        LOGIN
-                    </h1>
-
-                    <form onSubmit={handleSubmit} action="POST" className=' ml-[100px]'>
-                
-                            <div className='mb-2 p-3 font-light  items-center text-gray-400 text-xl '>
-                                <label htmlFor='email'>
-                                    <strong>Email: </strong>
-                                </label>
-                                <input 
-                                    type='text'
-                                    placeholder='Email'
-                                    autoComplete='off'
-                                    name='email'
-                                    className=' text-black bg-blue-200 border-4 border-cyan-800 rounded-lg ml-12  hover:bg-slate-400'
-                                    onChange={(e) => setEmail(e.target.value)} />
-                            </div>
-                            
-                            <div className='mb-2 p-3 font-light  items-center text-gray-400 text-xl'>
-                                <label htmlFor='password'>
-                                    <strong>Password: </strong>
-                                </label>
-                                <input 
-                                    type='password'
-                                    placeholder='Enter Password'
-                                    name='password'
-                                    className= ' text-black bg-blue-200 border-4 border-cyan-800 rounded-lg ml-4  hover:bg-slate-400' 
-                                    onChange={(e) => setPassword(e.target.value)}/>
-                            </div>
-                            <div className=' flex justify-center items-center'>
-                            <button type='submit' className=' mr-16 mt-[50px] mb-20 p-4 border w-40 bg-slate-500 rounded-3xl font-semibold text-gray-200 hover:bg-blue-200 hover:text-cyan-600'>
-                                    Login
-                                </button> 
-                            </div>
-                    </form> 
-
-                    <p className=' font-normal text-lg mt-6 ml-8 flex justify-center items-center text-green-300'>Create new Account</p>
-                    <Link to={"/register"} className=' ml-56 p-1 hover:bg-slate-500 hover:text-white font-mono font-bold flex justify-center items-center border w-40 bg-blend-lighten rounded'>
-                        Signup
-                    </Link>
-
-
-
-                </div>
+        <div className="bg-lblack h-2/3 w-1/4 rounded-xl shadow-green-500 shadow-md">
+          <div className="flex items-center ml-2 mt-3">
+            <img src="../flulogo.jpg" alt="Logo" className="w-12 h-12 rounded-full" />
+            <Link to="/" className="ml-2 font-semibold text-white">
+              MediMind-AI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; <strong>Login</strong>
+            </Link>
+          </div>
+          <form onSubmit={handleSubmit} className="px-4 py-2 mt-10">
+            <div className="mt-4">
+              <label htmlFor="email" className="block text-green-300">
+                Email:
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="border rounded-md px-2 py-1 w-full text-green-800"
+              />
             </div>
-
+            <div className="mt-4">
+              <label htmlFor="password" className="block text-green-300">
+                Password:
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="border rounded-md px-2 py-1 w-full text-green-800"
+              />
+            </div>
+            <div className="mt-4 text-center">
+              <button
+                type="submit"
+                className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-800 mt-8"
+              >
+                Login
+              </button>
+            </div>
+            <p className=" text-gray-400  flex justify-center items-center text-xl font-medium lg:mt-4 ">OR</p>
+            <div className=" text-gray-400  flex justify-center items-center  lg:mt-2 font-medium ">
+           
+              
+            
+            <Link to={"/register"}
+             >
+                 Create new account  
+              </Link>
+              </div>
+          </form>
         </div>
-
-        
-      </div> 
-    </div>
+      </div>
+    </>
   );
 };
 
 export default Login;
-
-
-
-
-
-
-
-

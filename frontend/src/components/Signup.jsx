@@ -1,91 +1,149 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import axios from "axios"
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+
+
 
 const Signup = () => {
+  const [formData, setFormData] = useState({
+    username: "",
+    aadhar: "",
+    email: "",
+    password: "",
+   
+  });
 
-    const [username,setName] = useState()
-    const [aadhar,setAadhar] = useState()
-    const [email,setEmail] = useState()
-    const [password,setPassword] = useState()
+  const navigate = useNavigate();
 
-    const navigate = useNavigate()
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        axios.post('/api/user/register', {username,aadhar,email,password})
-        .then(result => {console.log(result)
-            navigate('/login')
-        })
-    .catch(err => console.log(err))
-    }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("/api/users/register", formData)
+      .then((result) => {
+        console.log(result);
+        navigate("/report");
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
-    <div className='flex justify-center items-center  bg-gradient-to-r from-green-200 to-emerald-800 h-screen'>
-        <div className='bg-gradient-to-r from-teal-300 to-teal-900 p-3 border-spacing-2 shadow-[0px_9px_21px_5px_#c6f6d5] w-[800px] h-[500px] '>
-            <h2 className='flex justify-center items-center mt-8 mb-12 font-serif font-semibold text-gray-100 text-[30px]'>REGISTER</h2>
-            <form onSubmit={handleSubmit} className=' ml-[100px]'>
-                <div className='mb-2 ml-[100px] p-3  items-center text-gray-300 '>
-                    <label htmlFor='email'>
-                        <strong>Name: </strong>
-                    </label>
-                    <input 
-                        type='text'
-                        placeholder='Enter Name'
-                        autoComplete='off'
-                        name='username'
-                        className='  text-black rounded-lg ml-10 hover:p-1 hover:bg-slate-400'
-                        onChange={(e) => setName(e.target.value)} />
-                </div>
-                <div className='mb-2 ml-[100px] p-3  items-center text-gray-300 '>
-                    <label htmlFor='email'>
-                        <strong>Aadhar: </strong>
-                    </label>
-                    <input 
-                        type='text'
-                        placeholder='Enter Aadhar number'
-                        autoComplete='off'
-                        name='aadhar'
-                        className='text-black rounded-lg ml-8 hover:p-1 hover:bg-slate-400'
-                        onChange={(e) => setAadhar(e.target.value)} />
-                </div>
-                <div className='mb-2 ml-[100px] p-3  items-center text-gray-300 '>
-                    <label htmlFor='email'>
-                        <strong>Email: </strong>
-                    </label>
-                    <input 
-                        type='text'
-                        placeholder='Email'
-                        autoComplete='off'
-                        name='email'
-                        className='text-black rounded-lg ml-10 hover:p-1 hover:bg-slate-400'
-                        onChange={(e) => setEmail(e.target.value)} />
-                </div>
-                <div className='mb-2  ml-[100px] p-3 text-gray-300'>
-                    <label htmlFor='password'>
-                        <strong>Password: </strong>
-                    </label>
-                    <input 
-                        type='password'
-                        placeholder='Enter Password'
-                        name='password'
-                        className='text-black rounded-lg ml-2 hover:p-1 hover:bg-slate-400' 
-                        onChange={(e) => setPassword(e.target.value)}/>
-                </div>
-                <div className=' flex justify-center items-center p-4'>
-                   <button type='submit' className=' mt-10 mb-6 p-4 border w-40 bg-teal-800 rounded-3xl font-semibold text-gray-200 hover:bg-blue-200 hover:text-cyan-600'>
-                        Register
-                    </button> 
-                </div>
-              </form>  
-                <p className=' mt-30 ml-8 flex justify-center items-center text-green-300'>Already have an Account?</p>
-                <Link to={"/login"} className=' ml-[350px] p-1 hover:bg-slate-500 hover:text-white font-mono font-bold flex justify-center items-center border w-40 bg-blend-lighten rounded'>
-                    Login
-                </Link>
+    <>
+      <div
+        className="flex justify-center items-center h-screen gap-3"
+        style={{ position: "relative" }}
+      >
+        <img
+          src="../formpic.png"
+          alt="DOC"
+          className="h-screen rounded-xl shadow-green-500 shadow-md"
+          style={{
+            filter: "blur(5px) brightness(0.4)",
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: -1,
+            width:'1000px',
+            height:'580px',
+          }}
+        />
+        <img
+          src="../formpic.png"
+          alt="DOC"
+          className="h-2/3 rounded-xl shadow-green-500 shadow-md"
+        />
+
+        <div className="bg-lblack h-2/3 w-1/4 rounded-xl shadow-green-500 shadow-md ">
+          <div className="flex items-center ml-2 mt-3">
+            <img src="../flulogo.jpg" alt="Logo" className="w-12 h-12 rounded-full" />
+            <Link to="/" className="ml-2 font-semibold text-white">
+              FLUXION &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; <strong>SignUp</strong>
+            </Link>
+          </div>
+          <form onSubmit={handleSubmit} className="px-4 py-2">
+            <div className="mt-4">
+              <label htmlFor="username" className="block text-green-300">
+                Username:
+              </label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+                className="border rounded-md px-2 py-1 w-full text-green-800"
+              />
+            </div>
+            <div className="mt-4 flex justify-between">
+              <div className="w-full pr-2">
+                <label htmlFor="age" className="block text-green-300">
+                  Aadhar:
+                </label>
+                <input
+                  type="text"
+                  id="age"
+                  name="age"
+                  value={formData.aadhar}
+                  onChange={handleChange}
+                  className="border rounded-md px-2 py-1 w-full text-green-800"
+                />
+              </div>
+             
+            </div>
+            <div className="mt-4">
+              <label htmlFor="email" className="block text-green-300">
+                Email:
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="border rounded-md px-2 py-1 w-full text-green-800"
+              />
+            </div>
+            <div className="mt-4">
+              <label htmlFor="password" className="block text-green-300">
+                Password:
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="border rounded-md px-2 py-1 w-full text-green-800"
+              />
+            </div>
+            <div className="mt-4 text-center">
+              <button
+                type="submit"
+                className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-800 mt-3"
+              >
+                SignUp
+              </button>
+            </div>
+            <div className=" text-gray-400  flex justify-center items-center  lg:mt-1 hover:text-green-500">
+           
+              
             
+            <Link to={"/login"} 
+             >
+                 Already have an account?  
+              </Link>
+              </div>
+          </form>
         </div>
+      </div>
+    </>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Signup
+export default Signup;
