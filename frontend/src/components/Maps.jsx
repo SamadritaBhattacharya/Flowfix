@@ -16,6 +16,7 @@ const redIcon = new L.Icon({
 const Maps = () => {
   const [center, setCenter] = useState([0, 0]);
   const [doctorsLocations, setDoctorsLocations] = useState([]);
+  const [problems, setProblems] = useState([]);
 
   useEffect(() => {
     // Get user's current location
@@ -33,6 +34,18 @@ const Maps = () => {
     } else {
       console.error('Geolocation is not supported by this browser.');
     }
+    
+    // Sample problems related to drainage systems
+    const drainageProblems = [
+      "Drainage Leakage",
+      "Drainage Overflow",
+      "Clogged Drainage Pipes",
+      "Sewer Backup",
+      "Foul Odor from Drainage",
+      "Cracked Drainage Pipes"
+    ];
+
+    setProblems(drainageProblems);
   }, []);
 
   const generateRandomDoctorsLocations = (latitude, longitude) => {
@@ -72,7 +85,7 @@ const Maps = () => {
           </Marker>
           {doctorsLocations.map((pos, index) => (
             <Marker key={index} position={pos}>
-              <Popup>Doctor {index + 1} Location</Popup>
+              <Popup>{problems[Math.floor(Math.random() * problems.length)]}</Popup>
             </Marker>
           ))}
           <MyComponent />
