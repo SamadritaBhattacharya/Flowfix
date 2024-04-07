@@ -29,7 +29,7 @@ To install Fluxion locally, follow these steps:
 5. Configure environment variables as needed.
 6. Start the frontend and backend servers:
    - Frontend: `npm run dev`
-   - Backend: `npm start`
+   - Backend: `npm run dev`
 
 ## Contributing 🤝
 
