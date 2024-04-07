@@ -40,7 +40,7 @@ const Signup = () => {
         <img
           src="../formpic.png"
           alt="DOC"
-          className="h-screen rounded-xl shadow-green-500 shadow-md"
+          className="h-screen rounded-xl shadow-sky-600 shadow-md"
           style={{
             filter: "blur(5px) brightness(0.4)",
             position: "absolute",
@@ -55,10 +55,10 @@ const Signup = () => {
         <img
           src="../formpic.png"
           alt="DOC"
-          className="h-2/3 rounded-xl shadow-green-500 shadow-md"
+          className="h-2/3 rounded-xl shadow-sky-600 shadow-md"
         />
 
-        <div className="bg-lblack h-2/3 w-1/4 rounded-xl shadow-green-500 shadow-md ">
+        <div className="bg-lblack h-2/3 w-1/4 rounded-xl shadow-sky-600 shadow-md ">
           <div className="flex items-center ml-2 mt-3">
             <img src="../flulogo.jpg" alt="Logo" className="w-12 h-12 rounded-full" />
             <Link to="/" className="ml-2 font-semibold text-white">
@@ -68,7 +68,7 @@ const Signup = () => {
           </div>
           <form onSubmit={handleSubmit} className="px-4 py-2">
             <div className="mt-4">
-              <label htmlFor="username" className="block text-green-300">
+              <label htmlFor="username" className="block text-sky-300">
                 Username:
               </label>
               <input
@@ -82,7 +82,7 @@ const Signup = () => {
             </div>
             <div className="mt-4 flex justify-between">
               <div className="w-full pr-2">
-                <label htmlFor="age" className="block text-green-300">
+                <label htmlFor="age" className="block text-sky-300">
                   Aadhar:
                 </label>
                 <input
@@ -97,7 +97,7 @@ const Signup = () => {
              
             </div>
             <div className="mt-4">
-              <label htmlFor="email" className="block text-green-300">
+              <label htmlFor="email" className="block text-sky-300">
                 Email:
               </label>
               <input
@@ -110,7 +110,7 @@ const Signup = () => {
               />
             </div>
             <div className="mt-4">
-              <label htmlFor="password" className="block text-green-300">
+              <label htmlFor="password" className="block text-sky-300">
                 Password:
               </label>
               <input
@@ -125,12 +125,12 @@ const Signup = () => {
             <div className="mt-4 text-center">
               <button
                 type="submit"
-                className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-800 mt-3"
+                className="bg-sky-600 text-white px-4 py-2 rounded-md hover:bg-sky-800 mt-3"
               >
                 SignUp
               </button>
             </div>
-            <div className=" text-gray-200  flex justify-center items-center  lg:mt-1 hover:text-green-500">
+            <div className=" text-gray-200  flex justify-center items-center  lg:mt-1 hover:text-sky-500">
            
               
             
@@ -140,7 +140,7 @@ const Signup = () => {
               </Link>
               
               </div>
-              <button onClick={() => navigate("/")} className='p-1 border-1 rounded-3xl bg-green-600 w-20 ml-36  mt-16 text-white'>Go Back</button>  
+              <button onClick={() => navigate("/")} className='p-1 border-1 rounded-3xl bg-sky-600 w-20 ml-36  mt-16 text-white'>Go Back</button>  
           </form>
         </div>
       </div>

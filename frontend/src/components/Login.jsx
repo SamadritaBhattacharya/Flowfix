@@ -32,7 +32,7 @@ const Login = () => {
         <img
           src="../gg5.jpg"
           alt="DOC"
-          className="h-screen rounded-xl shadow-green-500 shadow-md"
+          className="h-screen rounded-xl shadow-sky-600 shadow-md"
           style={{
             filter: 'blur(5px) brightness(0.4)',
             position: 'absolute',
@@ -44,9 +44,9 @@ const Login = () => {
             height: '580px',
           }}
         />
-        <img src="../formpic.png" alt="DOC" className="h-2/3 rounded-xl shadow-green-500 shadow-md" />
+        <img src="../formpic.png" alt="DOC" className="h-2/3 rounded-xl shadow-sky-600 shadow-md" />
 
-        <div className="bg-lblack h-2/3 w-1/4 rounded-xl shadow-green-500 shadow-md">
+        <div className="bg-lblack h-2/3 w-1/4 rounded-xl shadow-sky-600 shadow-md">
           <div className="flex items-center ml-2 mt-3">
             <img src="../flulogo.jpg" alt="Logo" className="w-12 h-12 rounded-full" />
             <Link to="/" className="ml-2 font-semibold text-white">
@@ -56,7 +56,7 @@ const Login = () => {
           </div>
           <form onSubmit={handleSubmit} className="px-4 py-2 mt-10">
             <div className="mt-4">
-              <label htmlFor="email" className="block text-green-300">
+              <label htmlFor="email" className="block text-sky-300">
                 Email:
               </label>
               <input
@@ -65,11 +65,11 @@ const Login = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="border rounded-md px-2 py-1 w-full text-green-800"
+                className="border rounded-md px-2 py-1 w-full text-sky-800"
               />
             </div>
             <div className="mt-4">
-              <label htmlFor="password" className="block text-green-300">
+              <label htmlFor="password" className="block text-sky-300">
                 Password:
               </label>
               <input
@@ -78,13 +78,13 @@ const Login = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
-                className="border rounded-md px-2 py-1 w-full text-green-800"
+                className="border rounded-md px-2 py-1 w-full text-sky-800"
               />
             </div>
             <div className="mt-4 text-center">
               <button
                 type="submit"
-                className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-800 mt-8"
+                className="bg-sky-600 text-white px-4 py-2 rounded-md hover:bg-sky-800 mt-8"
               >
                 Login
               </button>
