@@ -45,10 +45,7 @@ export const Review = () => {
         <h2 className="text-4xl text-gray-100 font-semibold ">TESTIMONIALS</h2>
         <p className=" text-gray-100 mb-10 text-xl mt-8">
           {" "}
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt non
-          ipsa molestiae, ab cupiditate expedita error iusto molestias
-          laboriosam ullam, similique, deleniti quasi sequi facilis. Eveniet
-          fugit illum perferendis atque?
+          Flowfix exceeded all my expectations when it came to handling our drainage issues. From the moment we contacted them, their team was prompt, professional, and incredibly knowledgeable. They quickly diagnosed the problem and implemented effective solutions with minimal disruption to our daily operations. Their attention to detail and commitment to customer satisfaction truly sets them apart. I highly recommend Flowfix to anyone in need of top-notch drainage management services.
         </p>
       </div>
       <div className="mt-20">

@@ -26,7 +26,7 @@ const Signup = () => {
       .post("/api/users/register", formData)
       .then((result) => {
         console.log(result);
-        navigate("/report");
+        navigate("/profile");
       })
       .catch((err) => console.log(err));
   };
@@ -62,7 +62,7 @@ const Signup = () => {
           <div className="flex items-center ml-2 mt-3">
             <img src="../flulogo.jpg" alt="Logo" className="w-12 h-12 rounded-full" />
             <Link to="/" className="ml-2 font-semibold text-white">
-              FLUXION &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              FLOWFIX &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
               &nbsp; &nbsp; &nbsp; &nbsp; <strong>SignUp</strong>
             </Link>
           </div>
@@ -140,7 +140,7 @@ const Signup = () => {
               </Link>
               
               </div>
-              <button onClick={() => navigate("/")} className='p-1 border-1 rounded-3xl bg-sky-600 w-20 ml-36  mt-16 text-white'>Go Back</button>  
+              <button onClick={() => navigate("/profile")} className='p-1 border-1 rounded-3xl bg-sky-600 w-20 ml-36  mt-16 text-white'>Go Back</button>  
           </form>
         </div>
       </div>

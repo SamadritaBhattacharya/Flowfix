@@ -21,7 +21,7 @@ const Hero = () => {
 
         <h1 className="text-white  sm:text-5xl lg:text-6xl mt-28 ml-[70px] mb-6 text-4xl md:text-5xl  leading-tight"> 
                     <span className="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-cyan-200 via-green-50 to-teal-100  ">
-                         FLUXION:  {" "}
+                         FLOWFIX:  {" "}
                     </span>    
                     {/* bg-gradient-to-r from-purple-400 to-blue-600 */}
                     <br />

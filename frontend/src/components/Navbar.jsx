@@ -21,7 +21,7 @@ export default function NavHead() {
             className="w-12 h-12 rounded-full"
           />
           <Link to="/" className=" ml-6">
-            Fluxion
+            Flowfix
           </Link>
         </div>
 

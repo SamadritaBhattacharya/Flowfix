@@ -33,7 +33,7 @@ const Report = () => {
           <div className="flex items-center ml-2 mt-3">
             <img src="../flulogo.jpg" alt="Logo" className="w-12 h-12 rounded-full" />
             <Link to="/" className="ml-2 font-semibold text-gray-100">
-              FLuxion
+              FLOWFIX
               <strong className="ml-96 text-gray-100">Report Portal</strong>
             </Link>
           </div>
@@ -125,7 +125,7 @@ const Report = () => {
               >
                 Submit
               </button>
-              <button onClick={() => navigate("/")} className='p-1 border-1 rounded-3xl bg-sky-600 w-20 ml-48  text-white mt-2'>Go Back</button>  
+              <button onClick={() => navigate("/profile")} className='p-1 border-1 rounded-3xl bg-sky-600 w-20 ml-48  text-white mt-2'>Go Back</button>  
             </div>
           </form>
         </div>
@@ -136,3 +136,6 @@ const Report = () => {
 };
 
 export default Report;
+
+
+
